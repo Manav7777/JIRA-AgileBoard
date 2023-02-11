@@ -13,7 +13,7 @@ export class LoginService {
         type:'email',
         placeholder:'Enter email..',
         require: true,
-        class:'form-control',
+        class:'form-control input',
         formControlName:'email',
         label:'Email'
       },
@@ -22,7 +22,7 @@ export class LoginService {
         type:'password',
         placeholder:'Enter password..',
         require: true,
-        class:'form-control',
+        class:'form-control input',
         formControlName:'password',
         label:'Password'
       },

@@ -1,18 +1,97 @@
-<div class="container">
-    <div class="row">
-        <div class="wrapper">
-            <img src="{{img}}" alt="{{img}}">
-            <h1>Works</h1>
-            <form>
-                <div class="col-md-6">
-                    <div class="form-inner-wrapper" *ngFor="let input of inputFileds">
-                        <label for="{{input.label}}">{{input.label}}</label>
-                        <input type="{{input.type}}" name="{{input.name}}" placeholder="{{input.placeholder}}"
-                            FormControlName="{{input.formControlName}}" class="{{input.class}}" />
+<div class="bg-img">
+    <!-- <div class="left-img"></div>
+    <div class="right-img"></div> -->
+    <div class="">
+        <div class="">
+            <div class="header"></div>
+            <div class="wrapper">
+                <div class="main">
+                    <div class="img-altisian">
+                        <img src="{{img}}" alt="{{img}}">
                     </div>
-                    <button type="button" class="btn btn-dark mt-3">Submit</button>
+                    <div class="heading">
+                        <span>Login to your account</span>
+                    </div>
+                    <div class="input-wrapper">
+                        <form>
+                            <div class="form-inner-wrapper" *ngFor="let input of inputFileds">
+                                <label for="{{input.label}}">{{input.label}}</label>
+                                <input type="{{input.type}}" name="{{input.name}}" placeholder="{{input.placeholder}}"
+                                    FormControlName="{{input.formControlName}}" class="{{input.class}}" />
+                            </div>
+                            <button id="login-submit" class="btns btn-wrapper" type="button" tabindex="0"><span
+                                    class="btn-d-primary"><span>Continue</span></span></button>
+                        </form>
+                    </div>
+                    <div class="google-login social-login mt-3">
+                        <div class="login-library">
+                            <div class="login-library c-btn">
+                                <button id="google-auth-button" class="auth-button auth-wrapper flex-wrap" type="button"
+                                    tabindex="0">
+                                    <span class="thirdParty-icon"><img
+                                            src="https://aid-frontend.prod.atl-paas.net/atlassian-id/front-end/5.0.416/static/media/google-logo.e086107b.svg"
+                                            alt=""></span><span class="name-login">Google</span></button>
+                            </div>
+                            <div class="login-library c-btn"><button id="microsoft-auth-button"
+                                    class="auth-button flex-wrap" type="button" tabindex="0"><span
+                                        class="thirdParty-icon"><img
+                                            src="https://aid-frontend.prod.atl-paas.net/atlassian-id/front-end/5.0.416/static/media/microsoft-logo.42b61fa1.svg"
+                                            alt=""></span><span class="name-login">Microsoft</span></button></div>
+                        </div>
+                        <div data-testid="social-login-button-row" class="login-library">
+                            <div class="login-library c-btn"><button id="apple-auth-button"
+                                    class="auth-button flex-wrap" type="button" tabindex="0"><span
+                                        class="thirdParty-icon"><img
+                                            src="https://aid-frontend.prod.atl-paas.net/atlassian-id/front-end/5.0.416/static/media/apple-logo.4f2453fb.svg"
+                                            alt=""></span><span class="name-login">Apple</span></button></div>
+                            <div class="login-library c-btn"><button id="slack-auth-button"
+                                    class="auth-button flex-wrap" type="button" tabindex="0"><span
+                                        class="thirdParty-icon"><img
+                                            src="https://aid-frontend.prod.atl-paas.net/atlassian-id/front-end/5.0.416/static/media/slack-logo.0390f069.svg"
+                                            alt=""></span><span class="name-login">Slack</span></button></div>
+                        </div>
+                    </div>
+                    <div class="signup-wrapper">
+                        <ul class="d-flex">
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <span>Can't log in?</span>
+                                </a>
+                            </li>
+                            <li>
+                                <p>•</p>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <span>Can't log in?</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-wrapper">
+                        <div class="">
+                            <div class="footer-img">
+                                <img src="{{img}}" alt="{{img}}">
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span>Privacy Policy </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <p>•</p>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span>User Notice</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>
