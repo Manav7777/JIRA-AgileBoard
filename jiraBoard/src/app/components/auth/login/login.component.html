@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="wrapper">
+            <img src="{{img}}" alt="{{img}}">
+            <h1>Works</h1>
+            <form>
+                <div class="col-md-6">
+                    <div class="form-inner-wrapper" *ngFor="let input of inputFileds">
+                        <label for="{{input.label}}">{{input.label}}</label>
+                        <input type="{{input.type}}" name="{{input.name}}" placeholder="{{input.placeholder}}"
+                            FormControlName="{{input.formControlName}}" class="{{input.class}}" />
+                    </div>
+                    <button type="button" class="btn btn-dark mt-3">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
