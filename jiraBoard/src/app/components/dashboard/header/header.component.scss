@@ -1,0 +1,32 @@
+.navbar-wrapper{
+    width: 100%;
+    box-shadow: 0 3px 3px -3px #333;
+    .nav-item{
+        width: 100%;
+        font-size: 14px;
+        font-weight: 500;
+        padding-left: 10px;
+        img{
+            max-width: 25px;
+        }
+        &:hover{
+            background-color: rgba(140, 140, 140, 0.3);
+            border-radius: 5px;
+        }
+    }
+    .logo{
+        padding: 5px;
+        &:hover{
+            background-color: rgba(140, 140, 140, 0.3);
+            border-radius: 5px;
+        }
+    }
+    span{
+        font-size: 14px;
+        color: #fff;
+        font-weight: 500;
+    }
+    .btn-dark{
+        padding: 0 5px;
+    }
+}

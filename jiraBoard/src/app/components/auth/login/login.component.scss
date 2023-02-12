@@ -10,6 +10,9 @@
   background-size: 368px, 368px;
   background-position: left bottom, right bottom;
 }
+span{
+  font-size: 14px;
+}
 .header {
   text-align: center;
   padding: 40px 0px;
@@ -206,6 +209,7 @@
         padding: 0;
         display: flex;
         justify-content: center;
+        align-items: center;
         li {
           list-style-type: none;
           color: rgb(0, 82, 204);
@@ -214,6 +218,7 @@
           text-align: -webkit-match-parent;
           p {
             color: rgb(107, 119, 140);
+            margin-bottom: 0;
           }
           a {
             text-decoration: none;
