@@ -62,7 +62,7 @@ export class LoginService {
       {
         name: 'Confirm Password',
         type: 'password',
-        placeholder: 'Enter password..',
+        placeholder: 'Enter confirm password..',
         require: true,
         class: 'form-control input',
         formControlName: 'confirmPassword',
