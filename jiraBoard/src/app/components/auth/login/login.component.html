@@ -13,14 +13,14 @@
                         <span>Login to your account</span>
                     </div>
                     <div class="input-wrapper">
-                        <form>
+                        <form [formGroup]="authForm">
                             <div class="form-inner-wrapper" *ngFor="let input of inputFileds">
                                 <label for="{{input.label}}">{{input.label}}</label>
                                 <input type="{{input.type}}" name="{{input.name}}" placeholder="{{input.placeholder}}"
-                                    FormControlName="{{input.formControlName}}" class="{{input.class}}" />
+                                formControlName="{{input.formControlName}}" class="{{input.class}}" />
                             </div>
-                            <button id="login-submit" class="btns btn-wrapper" type="button" tabindex="0"><span
-                                    class="btn-d-primary"><span>Continue</span></span></button>
+                            <button id="login-submit" (click)="submit()" class="btns btn-wrapper" type="button"
+                                tabindex="0"><span class="btn-d-primary">Continue</span></button>
                         </form>
                     </div>
                     <div class="google-login social-login mt-3">
@@ -63,7 +63,8 @@
                             </li>
                             <li>
                                 <a href="javascript:void(0);">
-                                    <span>Sign up for an account</span>
+                                    <span *ngIf="!isSignUp; else login" (click)="signUp()">Sign up for an account</span>
+                                    <ng-template #login><span (click)="backtoLogin()">sign in.</span></ng-template>
                                 </a>
                             </li>
                         </ul>

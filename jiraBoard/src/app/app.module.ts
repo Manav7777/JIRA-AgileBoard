@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { AuthModule } from './components/auth/auth.module';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { DashboardModule } from './components/dashboard/dashboard.module';
+import { SpinerComponent } from './components/common/spiner/spiner.component';
 
 
 
@@ -14,6 +15,7 @@ import { DashboardModule } from './components/dashboard/dashboard.module';
   declarations: [
     AppComponent,
     NotFoundComponent,
+    SpinerComponent,
   ],
   imports: [
     BrowserModule,
