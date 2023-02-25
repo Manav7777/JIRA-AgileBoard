@@ -15,6 +15,8 @@ export class LoginComponent implements OnInit {
   inputFileds: any;
   isSignUp = false;
   authForm: FormGroup;
+  loginForm:FormGroup;
+  isSubmited = false;
   constructor(
     private loginService: LoginService,
     private loadingService: LoadingService,
@@ -34,23 +36,25 @@ export class LoginComponent implements OnInit {
   }
   ngOnInit(): void {
     if (!this.isSignUp) {
-      this.authForm = this.formBuilder.group({
+      this.loginForm = this.formBuilder.group({
         email: ['', Validators.required],
         password: ['', Validators.required],
       });
     } else {
       this.authForm = this.formBuilder.group({
         name: ['', Validators.required],
-        email: ['', Validators.required,Validators.email],
-        password: ['', [Validators.required, Validators.minLength(6)]],
-        confirmPassword: ['', Validators.required],
+        email: ['', [Validators.required,Validators.email]],
+        password: ['', [Validators.required,Validators.minLength(6)]],
+        confirmPassword: ['', [Validators.required,Validators.minLength(6)]],
       });
     }
   }
-  get register() {return this.authForm.controls;}
   submit() {
-    this.loadingService.showLoader();
-    console.log('form-login', this.authForm);
+    // this.loadingService.showLoader();
+    this.isSubmited = true;
+    console.log('form-re', this.authForm);
+    console.log('form-login', this.loginForm);
+
   }
   signUp() {
     this.isSignUp = true;
