@@ -10,17 +10,49 @@
                         <img src="{{img}}" alt="{{img}}">
                     </div>
                     <div class="heading">
-                        <span>Login to your account</span>
+                        <span>{{ isSignUp ? 'Signup' : 'Login'}} to your account</span>
                     </div>
                     <div class="input-wrapper">
-                        <form>
+                        <form [formGroup]="authForm" *ngIf="isSignUp">
                             <div class="form-inner-wrapper" *ngFor="let input of inputFileds">
                                 <label for="{{input.label}}">{{input.label}}</label>
                                 <input type="{{input.type}}" name="{{input.name}}" placeholder="{{input.placeholder}}"
-                                    FormControlName="{{input.formControlName}}" class="{{input.class}}" />
+                                    [ngClass]="{invalid: isSubmited && authForm.controls[input.formControlName].errors}"
+                                    formControlName="{{input.formControlName}}" class="{{input.class}}" />
+                                <!-- {{authForm.controls[input.formControlName]}} -->
+                                <div *ngIf="isSubmited && authForm.controls[input.formControlName].errors"
+                                    class="invalid-inputs">
+                                    <span *ngIf="authForm.controls[input.formControlName].errors.required">{{ input.name }} is required</span>
+                                    <span
+                                        *ngIf="authForm.controls[input.formControlName].errors[input.formControlName]">
+                                        {{ input.name }} is invalid</span>
+                                    <span *ngIf="authForm.controls[input.formControlName].errors.minlength">Password
+                                        must be at least 6 characters</span>
+                                </div>
                             </div>
-                            <button id="login-submit" class="btns btn-wrapper" type="button" tabindex="0"><span
-                                    class="btn-d-primary"><span>Continue</span></span></button>
+                            <button id="login-submit" (click)="submit()" class="btns btn-wrapper" type="button"
+                                tabindex="0"><span class="btn-d-primary">Continue</span></button>
+                                
+                        </form>
+                        <form [formGroup]="loginForm"  *ngIf="!isSignUp">
+                            <div class="form-inner-wrapper" *ngFor="let input of inputFileds">
+                                <label for="{{input.label}}">{{input.label}}</label>
+                                <input type="{{input.type}}" name="{{input.name}}" placeholder="{{input.placeholder}}"
+                                    [ngClass]="{invalid: isSubmited && loginForm.controls[input.formControlName].errors}"
+                                    formControlName="{{input.formControlName}}" class="{{input.class}}" />
+                                <!-- {{authForm.controls[input.formControlName]}} -->
+                                <div *ngIf="isSubmited && loginForm.controls[input.formControlName].errors"
+                                    class="invalid-inputs">
+                                    <span *ngIf="loginForm.controls[input.formControlName].errors.required">{{ input.name }} is required</span>
+                                    <span
+                                        *ngIf="loginForm.controls[input.formControlName].errors[input.formControlName]">
+                                        {{ input.name }} is invalid</span>
+                                    <span *ngIf="loginForm.controls[input.formControlName].errors.minlength">Password
+                                        must be at least 6 characters</span>
+                                </div>
+                            </div>
+                            <button id="login-submit" (click)="submit()" class="btns btn-wrapper" type="button"
+                                tabindex="0"><span class="btn-d-primary">Continue</span></button>
                         </form>
                     </div>
                     <div class="google-login social-login mt-3">
@@ -63,7 +95,8 @@
                             </li>
                             <li>
                                 <a href="javascript:void(0);">
-                                    <span>Sign up for an account</span>
+                                    <span *ngIf="!isSignUp; else login" (click)="signUp()">Sign up for an account</span>
+                                    <ng-template #login><span (click)="backtoLogin()">sign in.</span></ng-template>
                                 </a>
                             </li>
                         </ul>

@@ -1,7 +1,7 @@
 const Routes = {
     AUTH:{
         LOGIN:"/login",
-        REGISTER:'/register'
+        REGISTER:'/register',
     },
     DASHBOARD:{
         DASH_BOARD:'/dashboard'

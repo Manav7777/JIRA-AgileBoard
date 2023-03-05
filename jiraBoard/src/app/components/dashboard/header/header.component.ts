@@ -20,4 +20,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     // console.log('menu',this.commonService.setMenu())
   }
+  issueCreate(){
+    this.commonService.createIssue();
+  }
 }

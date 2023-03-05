@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+// import { TableComponent } from './table/table.component';
 import { DashbaordComponent } from './dashbaord.component';
+import { DetailComponent } from './detail/detail.component';
 import { IssuesComponent } from './issues/issues.component';
+// import { ToastComponent } from '../common/toast/toast.component';
 
 const routes: Routes = [
   { path: '', component: DashbaordComponent,children:[
-    { path: 'issues', component: IssuesComponent}
+    { path: 'issues', component: IssuesComponent},
+    { path: 'issues/:id', component:DetailComponent},
   ]},
+  // { path: 'toast', component:ToastComponent},
 ];
 
 @NgModule({
