@@ -98,4 +98,14 @@ export class LoginService {
       }
     })
   }
+  Login(obj) {
+    return this.http.post(environment.API_URL + Routes.AUTH.LOGIN,obj).subscribe((response:any)=>{
+      if(response.token){
+        this.messageService.add({severity:'success', summary:'login', detail:'Successfully Logged'})
+        localStorage.setItem('token',response.token)
+      }else{
+        this.messageService.add({severity:'error', summary:'login', detail:'Something wents worng'})
+      }
+    })
+  }
 }

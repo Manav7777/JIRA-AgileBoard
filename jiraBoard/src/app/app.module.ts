@@ -12,6 +12,7 @@ import {ToastModule} from 'primeng/toast';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {RippleModule} from 'primeng/ripple';
 import { MessageService } from 'primeng/api';
+
 // import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -29,11 +30,7 @@ import { MessageService } from 'primeng/api';
     ToastModule,
     BrowserAnimationsModule,
     RippleModule,
-    // HttpClientModule,
   ],
-  // exports:[
-  //   HttpClientModule,
-  // ],
   providers: [MessageService],
   bootstrap: [AppComponent]
 })
