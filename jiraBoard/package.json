@@ -21,9 +21,12 @@
     "@angular/platform-browser-dynamic": "~10.1.0",
     "@angular/router": "~10.1.0",
     "bootstrap": "^5.2.3",
+    "font-awesome": "^4.7.0",
     "primeflex": "^3.3.0",
+    "primeicons": "^6.0.1",
     "primeng": "^10.0.3",
     "rxjs": "~6.6.0",
+    "sass": "^1.58.3",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },

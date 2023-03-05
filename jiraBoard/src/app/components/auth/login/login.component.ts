@@ -5,6 +5,7 @@ import { LoadingService } from '../../common/spiner/loading.service';
 import { LoginService } from '../login.service';
 import Routes from 'src/app/Route';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MessageService } from 'primeng/api';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -21,10 +22,10 @@ export class LoginComponent implements OnInit {
     private loginService: LoginService,
     private loadingService: LoadingService,
     private router: Router,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
   ) {
     this.img = `${environment.APP_IMAGE_URL}assets/img/artisain.png`;
-    if (router.url === '/register') {
+    if (router.url === Routes.AUTH.REGISTER) {
       this.isSignUp = true;
     }
     if (!this.isSignUp) {
@@ -52,9 +53,13 @@ export class LoginComponent implements OnInit {
   submit() {
     // this.loadingService.showLoader();
     this.isSubmited = true;
-    console.log('form-re', this.authForm);
+    console.log('form-re', this.authForm.status);
     console.log('form-login', this.loginForm);
-
+    if(this.authForm.status === 'VALID'){
+      this.loginService.register(this.authForm.value);
+    }
+    this.isSubmited=false;
+    this.authForm.reset();
   }
   signUp() {
     this.isSignUp = true;
@@ -64,4 +69,5 @@ export class LoginComponent implements OnInit {
     this.isSignUp = false;
     this.loginService.goTOsignIn();
   }
+
 }

@@ -32,6 +32,7 @@
                             </div>
                             <button id="login-submit" (click)="submit()" class="btns btn-wrapper" type="button"
                                 tabindex="0"><span class="btn-d-primary">Continue</span></button>
+                                
                         </form>
                         <form [formGroup]="loginForm"  *ngIf="!isSignUp">
                             <div class="form-inner-wrapper" *ngFor="let input of inputFileds">
