@@ -7,37 +7,65 @@ import { ModalService } from '../../common/_modal';
 export class CommonService {
   menus: any;
   sidebarMenu: any;
-  headers:any
-  DATA_ISSUES:any;
+  headers: any;
+  profileMenu: any;
+  DATA_ISSUES: any;
   constructor(private modal: ModalService) {}
   setMenu() {
     const menu = [
       {
         id: '1',
         menu_item: 'Your Work',
+        arrow: true,
       },
       {
         id: '2',
         menu_item: 'Projects',
+        arrow: true,
       },
       {
         id: '3',
         menu_item: 'Filters',
+        arrow: true,
       },
       {
         id: '4',
         menu_item: 'Dashboards',
+        arrow: true,
       },
       {
         id: '5',
         menu_item: 'People',
+        arrow: true,
       },
       {
         id: '6',
         menu_item: 'Apps',
+        arrow: true,
       },
     ];
     return (this.menus = menu);
+  }
+  getProfileMenu() {
+    const profileMenu = [
+      {
+        items: [
+          {
+            label: 'Profile',
+            icon: 'pi pi-user',
+          },
+          {
+            label: 'Settings',
+            icon: 'pi pi-cog',
+          },
+          {
+            label: 'Logout',
+            icon: 'pi pi-sign-out',
+          },
+        ],
+      },
+    ];
+    return (this.profileMenu = profileMenu);
   }
   setSideBar() {
     const sidebarMenus = [
@@ -100,12 +128,12 @@ export class CommonService {
     this.modal.open('create-issue');
   }
   getIssues() {
-    return this.DATA_ISSUES = [
+    return (this.DATA_ISSUES = [
       { srno: '1', Task: 'coc-62225', devloper: 'Manav' },
       { srno: '2', Task: 'coc-62226', devloper: 'Ajay' },
-    ];
+    ]);
   }
-  getHeader(){
-    return this.headers=['srno','Task','Developer']
+  getHeader() {
+    return (this.headers = ['srno', 'Task', 'Developer']);
   }
 }
