@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   inputFileds: any;
   isSignUp = false;
   authForm: FormGroup;
-  loginForm:FormGroup;
+  loginForm: FormGroup;
   isSubmited = false;
   constructor(
     private loginService: LoginService,
@@ -36,6 +36,7 @@ export class LoginComponent implements OnInit {
     }
   }
   ngOnInit(): void {
+    this.redirect();
     if (!this.isSignUp) {
       this.loginForm = this.formBuilder.group({
         email: ['', Validators.required],
@@ -44,22 +45,30 @@ export class LoginComponent implements OnInit {
     } else {
       this.authForm = this.formBuilder.group({
         name: ['', Validators.required],
-        email: ['', [Validators.required,Validators.email]],
-        password: ['', [Validators.required,Validators.minLength(6)]],
-        confirmPassword: ['', [Validators.required,Validators.minLength(6)]],
+        email: ['', [Validators.required, Validators.email]],
+        password: ['', [Validators.required, Validators.minLength(6)]],
+        confirmPassword: ['', [Validators.required, Validators.minLength(6)]],
       });
     }
   }
   submit() {
-    // this.loadingService.showLoader();
     this.isSubmited = true;
-    console.log('form-re', this.authForm.status);
-    console.log('form-login', this.loginForm);
-    if(this.authForm.status === 'VALID'){
-      this.loginService.register(this.authForm.value);
+    if (this.isSignUp) {
+      if (this.authForm.status === 'VALID') {
+        this.loginService.register(this.authForm.value);
+      }
+    } else {
+      if (this.loginForm.status === 'VALID') {
+        this.loginService.Login(this.loginForm.value);
+        this.redirect();
+      }
     }
-    this.isSubmited=false;
-    this.authForm.reset();
+  }
+  redirect() {
+    var AuthToken = localStorage.getItem('token');
+    if (AuthToken) {
+      this.router.navigate([Routes.DASHBOARD.DASH_BOARD])
+    }
   }
   signUp() {
     this.isSignUp = true;

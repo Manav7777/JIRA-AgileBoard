@@ -1,0 +1,20 @@
+<!-- <div class="">
+    <div class="nav-item dropdown">
+        <div class="flex">
+            <button  class="nav-link  dropdown-toggle"  data-bs-toggle="dropdown">
+                <span class="round-profile">AD</span>
+            </button>
+        </div>
+        <div class="dropdown-menu dropdown-menu-end">
+            <div *ngFor="let menu of profileMenuList">
+                <div class="dropdown-divider" *ngIf="menu.divider"></div>
+                <a href="#" class="dropdown-item">{{menu.profile_menu}}</a>
+            </div>
+        </div>
+    </div>
+</div> -->
+<button type="button" class="round-profile" pRipple 
+        (click)="menu.toggle($event)">AD</button>
+<p-menu #menu [popup]="true" [model]="profileMenuList"></p-menu>
+
+  

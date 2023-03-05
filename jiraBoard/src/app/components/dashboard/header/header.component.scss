@@ -33,3 +33,11 @@
 .navbar-expand-lg .navbar-nav .nav-link{
     padding: 5px 5px !important;
 }
+.navbar-nav{
+    a{
+        text-decoration: none;
+    }
+}
+.navbar-expand-lg .navbar-nav{
+    align-items: center;
+}
