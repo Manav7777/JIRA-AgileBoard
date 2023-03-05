@@ -4,14 +4,15 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './auth-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [LoginComponent],
   imports: [
     CommonModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ]
 })
 export class AuthModule { }

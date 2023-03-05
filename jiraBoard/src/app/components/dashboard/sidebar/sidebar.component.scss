@@ -44,4 +44,9 @@
   top: 0;
   right: -20px;
   box-shadow: 0 0 5px #333;
+  &:hover{
+    transform: rotate(90deg);
+    transition: 0.6s ease;
+    background: rgb(129 191 255);
+  }
 }

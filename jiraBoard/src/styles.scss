@@ -1,17 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-@import "../node_modules//bootstrap/dist/css/bootstrap.min.css";
-@import "../node_modules/primeng/resources/themes/nova/theme.css";
-@import "../node_modules/primeng/resources/primeng.min.css";
-// @import "../node_modules/primeflex/src/flexbox";
-// @import "../node_modules/primeflex/src/display";
-// @import "../node_modules/primeflex/src/formlayout";
-// @import "../node_modules/primeflex/src/grid";
-// @import "../node_modules/primeflex/primeflex.css";
-// @import "../node_modules/primeflex/src/variables";
-// @import "../node_modules/primeflex/src/spacing";
-// @import "../node_modules/primeflex/src/elevation";
-
-
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import './overrides';
+@import '~font-awesome/css/font-awesome.min.css';
+@import '../node_modules/primeng/resources/themes/saga-blue/theme.css';
+@import '~primeng/resources/primeng.min.css';
+@import '~primeicons/primeicons.css';
 
 $primary-color: #0052cc !default;
 $accent-color: #0052cc !default;

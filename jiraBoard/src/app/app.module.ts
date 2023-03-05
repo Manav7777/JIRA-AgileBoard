@@ -8,8 +8,11 @@ import { AuthModule } from './components/auth/auth.module';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { DashboardModule } from './components/dashboard/dashboard.module';
 import { SpinerComponent } from './components/common/spiner/spiner.component';
-
-
+import {ToastModule} from 'primeng/toast';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {RippleModule} from 'primeng/ripple';
+import { MessageService } from 'primeng/api';
+// import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,8 +26,15 @@ import { SpinerComponent } from './components/common/spiner/spiner.component';
     AuthModule,
     ModalModule,
     DashboardModule,
+    ToastModule,
+    BrowserAnimationsModule,
+    RippleModule,
+    // HttpClientModule,
   ],
-  providers: [],
+  // exports:[
+  //   HttpClientModule,
+  // ],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
