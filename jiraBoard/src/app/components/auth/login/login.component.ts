@@ -65,10 +65,13 @@ export class LoginComponent implements OnInit {
     }
   }
   redirect() {
+   setTimeout(()=>{
     var AuthToken = localStorage.getItem('token');
+    console.log('Auth',AuthToken)
     if (AuthToken) {
       this.router.navigate([Routes.DASHBOARD.DASH_BOARD])
     }
+   },200)
   }
   signUp() {
     this.isSignUp = true;

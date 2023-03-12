@@ -4,7 +4,8 @@ const Routes = {
         REGISTER:'/register',
     },
     DASHBOARD:{
-        DASH_BOARD:'/dashboard'
+        DASH_BOARD:'/dashboard',
+        ISSUES:'dashboard/issues',
     }
 }
 export default Routes;

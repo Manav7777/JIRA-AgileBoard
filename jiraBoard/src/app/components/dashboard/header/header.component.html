@@ -26,7 +26,7 @@
                             </li>
                         </div>
                         &nbsp;
-                        <a href="javascript:void(0);" (click)="issueCreate()">
+                        <a href="javascript:void(0);" (click)="createTask()">
                            <span class="create btn btn-dark button nav-link">Create</span>
                         </a>
                     </ul>
@@ -35,4 +35,7 @@
             </nav>
         </div>
     </div>
+</div>
+<div *ngIf="isModalOpen">
+    <app-prime-modal></app-prime-modal>
 </div>

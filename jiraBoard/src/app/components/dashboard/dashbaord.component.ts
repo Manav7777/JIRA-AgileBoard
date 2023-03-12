@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PrimeModalService } from './prime-modal/prime-modal.service';
 
 @Component({
   selector: 'app-dashbaord',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashbaord.component.scss']
 })
 export class DashbaordComponent implements OnInit {
-
-  constructor() { }
+  isModalOpen = false;
+  constructor(private modalService:PrimeModalService) { }
 
   ngOnInit(): void {
+    
   }
 
 }

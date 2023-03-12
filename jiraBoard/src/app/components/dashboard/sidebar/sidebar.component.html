@@ -5,9 +5,10 @@
                 <span class="heading" href="javascript:void(0);">{{menu.menu_item}}</span>
                 <div class="sub-menu" *ngIf="menu.childMenu">
                     <ul class="list-group">
-                        <div class="hover" *ngFor="let submenu of menu.childMenu">
-                            <li class="d-flex side-link" id="{{submenu.id}}">
-                                <span class="{{submenu.icon_class}}" style="height: 25px;padding-left: 5px;"></span>
+                        <!-- [ngClass]="{active: isActive == submenu.route_link }" -->
+                        <div class="hover" *ngFor="let submenu of menu.childMenu" [ngClass]="{active: isActive == submenu.id}">
+                            <li class="flex side-link" id="{{submenu.id}}" (click)="goToPage(submenu)">
+                                <i class="{{submenu.icon_class}}"></i>
                                 <a href="javascript:void(0);">{{submenu.childMenu_item}}</a>
                             </li>
                         </div>
