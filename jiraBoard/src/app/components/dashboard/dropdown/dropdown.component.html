@@ -1,0 +1,6 @@
+<p-dropdown [options]="List">
+    <ng-template let-list pTemplate="List">
+        <img src="{{list.icon_url}}" style="width:16px;vertical-align:middle" />
+        <span style="vertical-align:middle" class="dropdown-text">{{list.label}}</span>
+    </ng-template>
+</p-dropdown>

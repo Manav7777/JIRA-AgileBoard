@@ -20,5 +20,4 @@ export class IssuesComponent implements OnInit {
     // console.log('headers',this.header);
     // console.log('Data',this.data);
   }
-
 }
