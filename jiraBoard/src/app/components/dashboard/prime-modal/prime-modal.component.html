@@ -1,0 +1,16 @@
+<p-dialog header="Long Content" [(visible)]="modalService.modal" [style]="{width: '65vw'}" [baseZIndex]="10000"
+    [draggable]="false" position="top">
+    <div class="p-dialog-header-icons ng-star-inserted">
+        <button type="button" tabindex="-1" pripple="" (click)="close()"
+        class="ng-tns-c60-2 p-dialog-header-icon p-dialog-header-close close p-link p-ripple"
+        ><span class="p-dialog-header-close-icon pi pi-times"
+            ></span><span class="p-ink"></span></button>
+    </div>
+    <app-create-epics></app-create-epics>
+    <ng-content></ng-content>
+    <ng-template pTemplate="footer">
+        <button pButton icon="pi pi-check" (click)="close()" label="Yes" class="p-button-raised p-button-primary p-button-rounded"></button>
+        <button pButton icon="pi pi-times" (click)="close()" class="p-button-raised p-button-danger p-button-rounded" label="Cancle"></button>
+    </ng-template>
+    
+</p-dialog>

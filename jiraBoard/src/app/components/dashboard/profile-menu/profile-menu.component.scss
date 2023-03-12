@@ -10,6 +10,12 @@
     border: 1px solid;
     font-weight: 600;
 }
-li.p-submenu-header {
-    display: none !important;
+::ng-deep{
+    .p-menu .p-submenu-header{
+        display: none;
+    }
+    .p-menu .p-menuitem-link .p-menuitem-text{
+        font-size: 15px;
+        font-weight: 600;
+    }
 }

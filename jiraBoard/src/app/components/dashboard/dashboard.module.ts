@@ -5,13 +5,18 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './dashboard-routing.module';
 import { IssuesComponent } from './issues/issues.component';
-import { DetailComponent } from './detail/detail.component';
 import { TableModule } from 'primeng/table';
 import { TableComponent } from './table/table.component';
 import { ProfileMenuComponent } from './profile-menu/profile-menu.component';
 import { MenuModule } from 'primeng/menu';
 import { RippleModule } from 'primeng/ripple';
 import { ButtonModule } from 'primeng/button';
+import { DialogModule } from 'primeng/dialog';
+import { PrimeModalComponent } from './prime-modal/prime-modal.component';
+import { CreateEpicsComponent } from './create-epics/create-epics.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
+import {DropdownModule} from 'primeng/dropdown';
+
 
 @NgModule({
   declarations: [
@@ -19,9 +24,11 @@ import { ButtonModule } from 'primeng/button';
     SidebarComponent,
     HeaderComponent,
     IssuesComponent,
-    DetailComponent,
     TableComponent,
     ProfileMenuComponent,
+    PrimeModalComponent,
+    CreateEpicsComponent,
+    DropdownComponent,
   ],
   imports: [
     CommonModule,
@@ -30,7 +37,9 @@ import { ButtonModule } from 'primeng/button';
     MenuModule,
     RippleModule,
     ButtonModule,
+    DialogModule,
+    DropdownModule,
   ],
-  exports: [TableModule,MenuModule,ButtonModule],
+  exports: [TableModule,MenuModule,ButtonModule,DialogModule],
 })
 export class DashboardModule {}

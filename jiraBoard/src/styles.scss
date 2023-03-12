@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import './overrides';
-@import '~font-awesome/css/font-awesome.min.css';
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 @import '../node_modules/primeng/resources/themes/saga-blue/theme.css';
 @import '~primeng/resources/primeng.min.css';
 @import '~primeicons/primeicons.css';
@@ -43,84 +43,84 @@ span{
 }
 
 // Icons Css
-.roadmap::after {
-  content: "";
-  background-image: url("assets/img/roadmap.png");
-  width: 30px;
-  display: inline-block;
-  height: 30px;
-  background-repeat: no-repeat;
-}
-.backlog::after {
-  content: "";
-  background-image: url("assets/img/backlog.png");
-  width: 30px;
-  display: inline-block;
-  height: 30px;
-  background-repeat: no-repeat;
-}
-.kanban::after {
-  content: "";
-  background-image: url("assets/img/kanban.png");
-  width: 30px;
-  display: inline-block;
-  height: 30px;
-  background-repeat: no-repeat;
-}
-.reports::after {
-  content: "";
-  background-image: url("assets/img/repoarts.png");
-  width: 30px;
-  display: inline-block;
-  height: 30px;
-  background-repeat: no-repeat;
-}
-.issues::after{
-  content: "";
-  background-image: url("assets/img/issues.png");
-  width: 30px;
-  display: inline-block;
-  height: 30px;
-  background-repeat: no-repeat;
-}
-.components::after{
-  content: "";
-  background-image: url("assets/img/components.png");
-  width: 30px;
-  display: inline-block;
-  height: 30px;
-  background-repeat: no-repeat;
-}
-.code::after{
-  content: "";
-  background-image: url("assets/img/code.png");
-  width: 30px;
-  display: inline-block;
-  height: 30px;
-  background-repeat: no-repeat;
-}
-.rebase::after{
-  content: "";
-  background-image: url("assets/img/release.png");
-  width: 30px;
-  display: inline-block;
-  height: 30px;
-  background-repeat: no-repeat;
-}
-.bg-default{
-  background-color: #e7e7e7;
-}
-.h-60{
-  height: calc(100vh - 60px) !important;
-}
-.arrow::after{
-  content: "";
-  background-image: url("assets/img/arrow.svg");
-  width: 25px;
-  display: inline-block;
-  height: 25px;
-  background-repeat: no-repeat;
-}
+// .roadmap::after {
+//   content: "";
+//   background-image: url("assets/img/roadmap.png");
+//   width: 30px;
+//   display: inline-block;
+//   height: 30px;
+//   background-repeat: no-repeat;
+// }
+// .backlog::after {
+//   content: "";
+//   background-image: url("assets/img/backlog.png");
+//   width: 30px;
+//   display: inline-block;
+//   height: 30px;
+//   background-repeat: no-repeat;
+// }
+// .kanban::after {
+//   content: "";
+//   background-image: url("assets/img/kanban.png");
+//   width: 30px;
+//   display: inline-block;
+//   height: 30px;
+//   background-repeat: no-repeat;
+// }
+// .reports::after {
+//   content: "";
+//   background-image: url("assets/img/repoarts.png");
+//   width: 30px;
+//   display: inline-block;
+//   height: 30px;
+//   background-repeat: no-repeat;
+// }
+// .issues::after{
+//   content: "";
+//   background-image: url("assets/img/issues.png");
+//   width: 30px;
+//   display: inline-block;
+//   height: 30px;
+//   background-repeat: no-repeat;
+// }
+// .components::after{
+//   content: "";
+//   background-image: url("assets/img/components.png");
+//   width: 30px;
+//   display: inline-block;
+//   height: 30px;
+//   background-repeat: no-repeat;
+// }
+// .code::after{
+//   content: "";
+//   background-image: url("assets/img/code.png");
+//   width: 30px;
+//   display: inline-block;
+//   height: 30px;
+//   background-repeat: no-repeat;
+// }
+// .rebase::after{
+//   content: "";
+//   background-image: url("assets/img/release.png");
+//   width: 30px;
+//   display: inline-block;
+//   height: 30px;
+//   background-repeat: no-repeat;
+// }
+// .bg-default{
+//   background-color: #e7e7e7;
+// }
+// .h-60{
+//   height: calc(100vh - 60px) !important;
+// }
+// .arrow::after{
+//   content: "";
+//   background-image: url("assets/img/arrow.svg");
+//   width: 25px;
+//   display: inline-block;
+//   height: 25px;
+//   background-repeat: no-repeat;
+// }
 .round-profile{
   border-radius: 50%;
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonService } from '../service/common.service';
+import Routes from 'src/app/Route';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,14 +9,29 @@ import { CommonService } from '../service/common.service';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-
+  isActive;
   constructor(public commonService:CommonService,private router:Router) { }
 
   ngOnInit(): void {
-
+    if(localStorage.getItem('active')){
+      this.isActive = localStorage.getItem('active');
+      console.log(this.isActive)
+      setTimeout(()=>{
+        if(this.router.url === Routes.DASHBOARD.DASH_BOARD){
+          localStorage.removeItem('active');
+        }
+      },500)
+    }
   }
-  activeLink(obj){
-    console.log('obj',obj)
+  goToPage(obj){
+    if(obj.route_link){
+      if(this.router.url === '/'+obj.route_link){
+        localStorage.setItem('active',obj.id)
+      }else{
+        localStorage.removeItem('active');
+      }
+      this.isActive = obj.id
+      this.router.navigate([obj.route_link])
+    }
   }
-
 }

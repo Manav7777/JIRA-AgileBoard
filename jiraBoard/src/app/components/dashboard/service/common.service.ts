@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+import Routes from 'src/app/Route';
 import { ModalService } from '../../common/_modal';
+
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +13,7 @@ export class CommonService {
   headers: any;
   profileMenu: any;
   DATA_ISSUES: any;
-  constructor(private modal: ModalService) {}
+  constructor(private modal: ModalService,private router:Router) {}
   setMenu() {
     const menu = [
       {
@@ -61,6 +64,9 @@ export class CommonService {
           {
             label: 'Logout',
             icon: 'pi pi-sign-out',
+            command: () => {
+              this.logout();
+          }
           },
         ],
       },
@@ -76,32 +82,33 @@ export class CommonService {
           {
             id: '2',
             childMenu_item: 'Roadmap',
-            icon_class: 'roadmap',
+            icon_class: 'bi bi-map',
           },
           {
             id: '3',
             childMenu_item: 'Backlog',
-            icon_class: 'backlog',
+            icon_class: 'bi bi-list-nested',
           },
           {
             id: '4',
             childMenu_item: 'Active sprints',
-            icon_class: 'kanban',
+            icon_class: 'bi bi-layout-three-columns',
           },
           {
             id: '5',
             childMenu_item: 'Reports',
-            icon_class: 'reports',
+            icon_class: 'bi bi-graph-up-arrow',
           },
           {
             id: '6',
             childMenu_item: 'Issues',
-            icon_class: 'issues',
+            icon_class: 'bi bi-view-list',
+            route_link:`${Routes.DASHBOARD.ISSUES}`
           },
           {
             id: '7',
             childMenu_item: 'Components',
-            icon_class: 'components',
+            icon_class: 'bi bi-collection',
           },
         ],
       },
@@ -112,21 +119,22 @@ export class CommonService {
           {
             id: '9',
             childMenu_item: 'Code',
-            icon_class: 'code',
+            icon_class: 'bi bi-code-slash',
           },
           {
             id: '10',
             childMenu_item: 'Rebase',
-            icon_class: 'rebase',
+            icon_class: 'bi bi-stack',
           },
         ],
       },
     ];
     return (this.sidebarMenu = sidebarMenus);
   }
-  createIssue() {
-    this.modal.open('create-issue');
-  }
+  // createIssue(isModalOpen) {
+    // isModalOpen = true;
+    // this.modal.open('create-issue');
+  // }
   getIssues() {
     return (this.DATA_ISSUES = [
       { srno: '1', Task: 'coc-62225', devloper: 'Manav' },
@@ -135,5 +143,9 @@ export class CommonService {
   }
   getHeader() {
     return (this.headers = ['srno', 'Task', 'Developer']);
+  }
+  logout(){
+    localStorage.removeItem('token');
+    this.router.navigate([Routes.AUTH.LOGIN])
   }
 }

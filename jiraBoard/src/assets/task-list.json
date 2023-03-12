@@ -1,0 +1,25 @@
+{
+    "create":[
+        {
+            "id":1,
+            "label":"Epic",
+            "icon_url":"http://localhost:4200/assets/img/epic.png"
+        },
+        {
+            "id":2,
+            "label":"Story",
+            "icon_url":"http://localhost:4200/assets/img/story.png"
+        },
+        {
+            "id":3,
+            "label":"Task",
+            "icon_url":"http://localhost:4200/assets/img/task.png"
+        },
+        {
+            "id":4,
+            "label":"Bug",
+            "icon_url":"http://localhost:4200/assets/img/bug.png"
+        }
+    ]
+}
+
