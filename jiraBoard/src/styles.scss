@@ -5,11 +5,15 @@
 @import '../node_modules/primeng/resources/themes/saga-blue/theme.css';
 @import '~primeng/resources/primeng.min.css';
 @import '~primeicons/primeicons.css';
+@import "./button.scss";
+@import "./variable.scss";
 
-$primary-color: #0052cc !default;
-$accent-color: #0052cc !default;
-$default-color: #42526e;
-$hover-background: rgba(140, 140, 140, 0.3);
+// $primary-color: #0052cc !default;
+// $accent-color: #0052cc !default;
+// $default-color: #42526e;
+// $hover-background: rgba(140, 140, 140, 0.3);
+  
+
 * {
   margin: 0;
   padding: 0;
@@ -18,9 +22,7 @@ $hover-background: rgba(140, 140, 140, 0.3);
 html,
 body {
   scroll-behavior: smooth;
-  // font-family: 'Oxygen', sans-serif;
-  // font-family: 'Fira Sans', sans-serif;
-  // font-family: 'Ubuntu', sans-serif;
+  background-color: #f4f5fa;
 }
 h1,
 h2 {
@@ -42,85 +44,6 @@ span{
   font-size: 16px;
 }
 
-// Icons Css
-// .roadmap::after {
-//   content: "";
-//   background-image: url("assets/img/roadmap.png");
-//   width: 30px;
-//   display: inline-block;
-//   height: 30px;
-//   background-repeat: no-repeat;
-// }
-// .backlog::after {
-//   content: "";
-//   background-image: url("assets/img/backlog.png");
-//   width: 30px;
-//   display: inline-block;
-//   height: 30px;
-//   background-repeat: no-repeat;
-// }
-// .kanban::after {
-//   content: "";
-//   background-image: url("assets/img/kanban.png");
-//   width: 30px;
-//   display: inline-block;
-//   height: 30px;
-//   background-repeat: no-repeat;
-// }
-// .reports::after {
-//   content: "";
-//   background-image: url("assets/img/repoarts.png");
-//   width: 30px;
-//   display: inline-block;
-//   height: 30px;
-//   background-repeat: no-repeat;
-// }
-// .issues::after{
-//   content: "";
-//   background-image: url("assets/img/issues.png");
-//   width: 30px;
-//   display: inline-block;
-//   height: 30px;
-//   background-repeat: no-repeat;
-// }
-// .components::after{
-//   content: "";
-//   background-image: url("assets/img/components.png");
-//   width: 30px;
-//   display: inline-block;
-//   height: 30px;
-//   background-repeat: no-repeat;
-// }
-// .code::after{
-//   content: "";
-//   background-image: url("assets/img/code.png");
-//   width: 30px;
-//   display: inline-block;
-//   height: 30px;
-//   background-repeat: no-repeat;
-// }
-// .rebase::after{
-//   content: "";
-//   background-image: url("assets/img/release.png");
-//   width: 30px;
-//   display: inline-block;
-//   height: 30px;
-//   background-repeat: no-repeat;
-// }
-// .bg-default{
-//   background-color: #e7e7e7;
-// }
-// .h-60{
-//   height: calc(100vh - 60px) !important;
-// }
-// .arrow::after{
-//   content: "";
-//   background-image: url("assets/img/arrow.svg");
-//   width: 25px;
-//   display: inline-block;
-//   height: 25px;
-//   background-repeat: no-repeat;
-// }
 .round-profile{
   border-radius: 50%;
 }

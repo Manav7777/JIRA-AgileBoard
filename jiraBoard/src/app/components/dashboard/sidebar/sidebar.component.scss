@@ -1,3 +1,4 @@
+@import "../../../../variable.scss";
 .sidebar {
   width: 100%;
   position: relative;
@@ -29,20 +30,20 @@
 .hover{
   margin: 2px 0;
   &:hover {
-  background-color: #e6f0ff;
+  background-color: $sidebar-menu-background;
   cursor: pointer;
   border-radius: 5px;
   transition: 0.5s ease;
   i{
-    color: #0052cc;
+    color: $jira-btn-color;
   }
   a{
-    color: #0052cc !important;
+    color: $jira-btn-color !important;
   }
 }
 }
 .chnageView {
-  background: #fff;
+  background: $white-color;
   border-radius: 50%;
   border: 1px solid #42526e;
   display: flex;
@@ -58,17 +59,17 @@
   &:hover{
     transform: rotate(90deg);
     transition: 0.6s ease;
-    background: #e9eff7;
+    background: $sidebar-menu-background-active;
   }
 }
 .active {
-  background-color: #e9eff7;
+  background-color: $sidebar-menu-background-active;
   border-radius: 5px;
   i{
-    color: #0052cc;
+    color: $jira-btn-color;
   }
   a{
-    color: #0052cc !important;
+    color: $jira-btn-color !important;
   }
 }
 .flex{

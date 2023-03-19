@@ -10,9 +10,13 @@ import Routes from 'src/app/Route';
 })
 export class SidebarComponent implements OnInit {
   isActive;
+  sidebarMenu:any;
   constructor(public commonService:CommonService,private router:Router) { }
 
   ngOnInit(): void {
+    this.commonService.setSideBar().subscribe((sidemenu)=>{
+      this.sidebarMenu = sidemenu.SidebarMenu;
+    })
     if(localStorage.getItem('active')){
       this.isActive = localStorage.getItem('active');
       console.log(this.isActive)
@@ -24,6 +28,7 @@ export class SidebarComponent implements OnInit {
     }
   }
   goToPage(obj){
+    console.log('obj',obj)
     if(obj.route_link){
       if(this.router.url === '/'+obj.route_link){
         localStorage.setItem('active',obj.id)

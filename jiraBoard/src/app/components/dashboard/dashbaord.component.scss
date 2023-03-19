@@ -1,6 +1,10 @@
+@import "../../../variable.scss";
 .bg-default{
-    background-color: #f7f7f7de;
+    // background-color: #f7f7f7de;
+    background-color: $white-color;
     height: 100vh;
     // box-shadow: 0 10px 10px rgba(0,0,0,0.22);
-    border-right: 2px solid rgb(231, 229, 229);
+    // border-right: 2px solid rgb(231, 229, 229);
+    box-shadow: 0 1px 3px 0 rgba(54,80,138,.3);
+    transition: all .3s ease-in-out;
 }

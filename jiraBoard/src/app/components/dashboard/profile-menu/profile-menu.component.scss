@@ -1,4 +1,4 @@
-
+@import "../../../../variable.scss";
 .round-profile {
     border-radius: 50%;
     padding: 6px;
@@ -6,9 +6,10 @@
     width: 40px;
     height: 40px;
     display: inline-block;
-    color: #fff;
+    color: $white-color;
     border: 1px solid;
     font-weight: 600;
+    box-shadow: $default-box-shadow;
 }
 ::ng-deep{
     .p-menu .p-submenu-header{
@@ -17,5 +18,20 @@
     .p-menu .p-menuitem-link .p-menuitem-text{
         font-size: 15px;
         font-weight: 600;
+    }
+    .p-menuitem{
+        margin-bottom: 3px;
+    }
+    .p-menu .p-menuitem-link:not(.p-disabled):hover{
+        background: $menu-background;
+        color: $white-color !important;
+        transition: 0.5s ease;
+        box-shadow: 0 9px 8px -9px rgba(0,0,0,0.25);
+        .p-menuitem-icon,.p-menuitem-text{
+            color: $white-color !important;
+        }
+    }
+    .p-menuitem:last-child{
+        border-top: 1px dotted $devider-background-color;
     }
 }
