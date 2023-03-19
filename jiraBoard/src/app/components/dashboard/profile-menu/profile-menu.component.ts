@@ -17,10 +17,12 @@ export class ProfileMenuComponent implements OnInit {
   }
   ngOnInit(): void {
     this.primengConfig.ripple = true;
-    this.profileMenuList = this.commonService.getProfileMenu();
+    this.commonService.getProfileMenu().subscribe((data)=>{
+      data.ProfileMenu[2].command=()=>{this.logout()}
+      this.profileMenuList = data.ProfileMenu
+    })
   }
-  // toogleProfileMenu(){
-  //   this.isMenuOpen = !this.isMenuOpen
-  // }
-
+  logout(){
+    this.commonService.logout();
+  }
 }

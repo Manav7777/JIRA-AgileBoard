@@ -1,0 +1,140 @@
+@import "./variable.scss";
+
+.primary-btn{
+    background-color: $btn-primary-color;
+    color: $white-color;
+    box-shadow: 0 4px 9px -4px $btn-primary-color;
+    &:hover{
+        background-color: $btn-primary-hover;
+        color: $white-color;
+        box-shadow: 0 8px 9px -4px rgba(59,113,202,.3), 0 4px 18px 0 rgba(59,113,202,.2);
+    }
+    &:focus{
+        background-color: $btn-primary-hover;
+        color: $white-color;
+    }
+    &:active{
+        background-color: #3566b6 !important;
+        color: $white-color !important;
+    }
+}
+.dark-btn{
+    background-color: $btn-dark-color;
+    color: $white-color;
+    box-shadow: 0 4px 9px -4px $btn-dark-color;
+    &:hover{
+        background-color: $btn-dark-hover !important;
+        color: $white-color !important;
+        box-shadow: 0 8px 9px -4px rgba(51,45,45,.3), 0 4px 18px 0 rgba(51,45,45,.2);
+    }
+    &:focus{
+        background-color: $btn-dark-hover !important;
+        color: $white-color;
+    }
+    &:active{
+        background-color: $btn-dark-active !important;
+        color: $white-color !important;
+    }
+}
+.danger-btn{
+    background-color: $btn-danger-color;
+    box-shadow: 0 4px 9px -4px $btn-danger-color;
+    color: $white-color;
+    &:hover{
+        background-color: $btn-danger-focus;
+        box-shadow: 0 8px 9px -4px rgba(220,76,100,.3), 0 4px 18px 0 rgba(220,76,100,.2);
+        color: $white-color;
+    }
+    &:focus{
+        background-color: $btn-danger-focus !important;
+        color: $white-color;
+    }
+    &:active{
+        background-color: $btn-danger-active !important;
+        color: $white-color !important;
+    }
+}
+.danger-c-btn{
+    background: rgba(255,82,82,.2);
+    border-color: #ffcfcf;
+    color: $btn-danger-c-color;
+    box-shadow: 0 4px 9px -4px $btn-danger-c-color;
+    &:hover{
+        background-color: $btn-danger-c-color;
+        color: $white-color;
+        transition: 0.5s ease;
+        box-shadow: 0 8px 9px -4px rgba(220,76,100,.3), 0 4px 18px 0 rgba(220,76,100,.2);
+    }
+}
+.success-btn{
+    background-color: $btn-success-color;
+    color: $white-color;
+    box-shadow: 0 4px 9px -4px $btn-success-color;
+    &:hover{
+      background-color:$btn-success-color;
+      color:$white-color;
+      box-shadow: 0 8px 9px -4px rgba(20,164,77,.3), 0 4px 18px 0 rgba(20,164,77,.2);
+    }
+    &:active{
+        background-color: $btn-success-active !important;
+        color: $white-color;
+    }
+    &:focus{
+        background-color: $btn-success-focus !important;
+        color: $white-color;
+    }
+}
+.warning-btn{
+    background-color: $btn-warning-color;
+    color: $white-color;
+    box-shadow: 0 4px 9px -4px $btn-warning-color;
+    &:hover{
+        background-color: $btn-warning-hover;
+        color: $white-color;
+        box-shadow: 0 8px 9px -4px rgba(228,161,27,.3), 0 4px 18px 0 rgba(228,161,27,.2);
+    }
+    &:active{
+        background-color: $btn-warning-active !important;
+        color: $white-color;
+    }
+    &:focus{
+        background-color: $btn-warning-active;
+        color: $white-color;
+    }
+}
+
+.primary-c-btn{
+    background-color: #e3ebf7;
+    color: #285192 !important;
+    box-shadow: 0 4px 9px -4px #e3ebf7;
+    &:hover{
+        background-color: #d8dfeb;
+        color: #285192;
+    }
+    &:active{
+        background-color: #ccd4de !important;
+        color: #285192;
+    }
+    &:focus{
+        background-color: #d8dfeb !important;
+        color: #285192 !important;
+    }
+}
+.secondary-btn{
+    background-color: $btn-secondary-color;
+    color: $white-color !important;
+    box-shadow: 0 4px 9px -4px $btn-secondary-shadow;
+    &:hover{
+        background-color: $btn-secondary-hover;
+        color: $btn-secondary-font;
+        box-shadow: 0 8px 9px -4px rgba(92, 92, 91, 0.3), 0 4px 18px 0 rgba(83, 83, 83, 0.2);
+    }
+    &:active{
+        background-color: $btn-secondary-hover !important;
+        color: $btn-secondary-font;
+    }
+    &:focus{
+        background-color: $btn-secondary-hover !important;
+        color: $btn-secondary-font !important;
+    }
+}

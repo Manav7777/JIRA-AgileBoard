@@ -1,0 +1,17 @@
+{
+    "ProfileMenu":[
+      {
+        "label": "Profile",
+        "icon": "pi pi-user"
+      },
+      {
+        "label": "Settings",
+        "icon": "pi pi-cog"
+      },
+      {
+        "label": "Logout",
+        "icon": "pi pi-sign-out",
+        "command": "() => {this.logout();}"
+      }
+    ]
+}

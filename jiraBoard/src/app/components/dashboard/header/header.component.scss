@@ -1,6 +1,8 @@
+@import "../../../../variable.scss";
 .navbar-wrapper{
     width: 100%;
     box-shadow: 0 3px 3px -3px #333;
+    background-color: $white-color;
     .nav-item{
         width: 100%;
         font-size: 14px;
@@ -23,7 +25,7 @@
     }
     span{
         font-size: 14px;
-        color: #fff;
+        color: $white-color;
         font-weight: 500;
     }
     .btn-dark{
@@ -40,4 +42,8 @@
 }
 .navbar-expand-lg .navbar-nav{
     align-items: center;
+}
+.c-pointer{
+    cursor: pointer;
+    padding-right: 10px;
 }

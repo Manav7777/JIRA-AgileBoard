@@ -1,0 +1,57 @@
+{
+    "SidebarMenu": [
+        {
+            "id": 1,
+            "menu_item": "Planing",
+            "childMenu": [
+                {
+                    "id": 2,
+                    "childMenu_item": "Roadmap",
+                    "icon_class": "bi bi-map"
+                },
+                {
+                    "id": 3,
+                    "childMenu_item": "Backlog",
+                    "icon_class": "bi bi-list-nested"
+                },
+                {
+                    "id": 4,
+                    "childMenu_item": "Active sprints",
+                    "icon_class": "bi bi-layout-three-columns"
+                },
+                {
+                    "id": 5,
+                    "childMenu_item": "Reports",
+                    "icon_class": "bi bi-graph-up-arrow"
+                },
+                {
+                    "id": 6,
+                    "childMenu_item": "Issues",
+                    "icon_class": "bi bi-view-list",
+                    "route_link": "dashboard/issues"
+                },
+                {
+                    "id": 7,
+                    "childMenu_item": "Components",
+                    "icon_class": "bi bi-collection"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "menu_item": "Development",
+            "childMenu": [
+                {
+                    "id": 9,
+                    "childMenu_item": "Code",
+                    "icon_class": "bi bi-code-slash"
+                },
+                {
+                    "id": 10,
+                    "childMenu_item": "Rebase",
+                    "icon_class": "bi bi-stack"
+                }
+            ]
+        }
+    ]
+}
