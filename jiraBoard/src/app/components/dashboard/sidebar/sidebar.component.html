@@ -1,6 +1,6 @@
 <div class="sidebar">
     <div class="sidebar-wrapper">
-        <div class="menu-wrapper" *ngFor="let menu of commonService.setSideBar()">
+        <div class="menu-wrapper" *ngFor="let menu of sidebarMenu">
             <span id="{{menu.id}}">
                 <span class="heading" href="javascript:void(0);">{{menu.menu_item}}</span>
                 <div class="sub-menu" *ngIf="menu.childMenu">

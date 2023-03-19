@@ -18,17 +18,20 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto">
-                        <div class="header-wrapper" *ngFor="let menu of commonService.setMenu()">
+                        <div class="header-wrapper" *ngFor="let menu of menus">
                             <li class="nav-item">
                                 <a href="javascript:void(0)" class="nav-link">{{menu.menu_item}}
                                     <span><img src="{{arrowImg}}" alt="arrow" *ngIf="menu.arrow"></span>
                                 </a>
                             </li>
                         </div>
-                        &nbsp;
+                        &nbsp;&nbsp;
+                        <div class="c-pointer" (click)="fullscreenToogle()">
+                            <i class="bi bi-arrows-fullscreen"></i>
+                        </div>
                         <a href="javascript:void(0);" (click)="createTask()">
-                           <span class="create btn btn-dark button nav-link">Create</span>
-                        </a>
+                           <span class="create btn dark-btn button nav-link">Create</span>
+                        </a>                        
                     </ul>
                     <app-profile-menu></app-profile-menu>
                 </div>
